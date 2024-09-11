@@ -9,8 +9,24 @@
     {
       "name": "Create a task",
       "request": {
-        "method": "GET",
-        "header": []
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Task Number one\",\r\n  \"description\": \"Description\",\r\n  \"priority\": \"High\",\r\n  \"assignedMember\": \"Member Name\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/tasks",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "tasks"]
+        }
       },
       "response": []
     },
@@ -18,15 +34,38 @@
       "name": "Get all tasks",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/tasks",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "tasks"]
+        }
       },
       "response": []
     },
     {
       "name": "Update task status",
       "request": {
-        "method": "GET",
-        "header": []
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"status\": \"completed\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/tasks/66e17a082f3172a337ba76af/status",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "tasks", "66e17a082f3172a337ba76af", "status"]
+        }
       },
       "response": []
     },
@@ -34,7 +73,26 @@
       "name": "Generate Report",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/report",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "report"],
+          "query": [
+            {
+              "key": "timePeriod",
+              "value": "week",
+              "disabled": true
+            },
+            {
+              "key": "teamMember",
+              "value": "Member name",
+              "disabled": true
+            }
+          ]
+        }
       },
       "response": []
     }

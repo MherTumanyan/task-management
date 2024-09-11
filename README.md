@@ -26,7 +26,6 @@ A task management system built with Node.js, Express, and MongoDB. This applicat
 - `PATCH /api/tasks/:id/status`: Update task status.
 - `GET /api/reports`: Generate a report based on specified parameters.
 
-
 ## Running Tests
 
 You can run the entire test suite or test specific files using the following npm scripts:
@@ -40,12 +39,9 @@ You can run the entire test suite or test specific files using the following npm
   npm run test:report
   ```
 - **Run task tests only**: To execute tests specific to tasks, use:
-    ```bash
-    npm run test:report
-    ```
-
-
-
+  ```bash
+  npm run test:report
+  ```
 
 ## Security
 

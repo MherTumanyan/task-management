@@ -6,7 +6,7 @@ import mongoose from 'mongoose';
 afterAll(async () => {
   await mongoose.connection.dropDatabase(); // Clean up the test database
   await mongoose.connection.close();
-  server.close()
+  server.close();
 });
 
 describe('Report API', () => {
